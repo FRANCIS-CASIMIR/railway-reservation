@@ -20,6 +20,14 @@ public class Manager {
     }
 
     public void book(char berthName,String passengerName){
+
+        /*
+        * If the selected berth is available allocate.
+        * Else allocate the available berth in the following order.
+        * Upper - Middle - Lower - WL
+        *
+        * */
+
         switch (berthName){
             case 'U':
                 if (upperBerth.size() < uBerthCapacity){
